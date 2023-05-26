@@ -1,0 +1,79 @@
+@use "../../../scss/colors.scss" as *;
+
+.list-todo {
+  text-align: left;
+  padding: 20px;
+  position: relative;
+
+  &-m {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 977;
+
+    padding: 0 20px;
+    transform: translate(200%, -100%);
+    transition: all 0.3s ease-in-out;
+  }
+  &-a {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    z-index: 977;
+    padding: 0 20px;
+    transition: all 0.3s ease-in-out;
+    transform: translate(0);
+  }
+
+  &__message-n {
+    text-align: center;
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+    font-size: 20px;
+    border-radius: 10px;
+    width: auto;
+    font-weight: bold;
+
+    @media (max-width: 500px) {
+      width: 80%;
+    }
+  }
+
+  .dark-m {
+    background-color: $background-primary;
+    color: $success;
+    border-left: 4px solid $success;
+  }
+  .light-m {
+    background-color: $color-dark;
+    color: $success;
+    border-left: 4px solid $success;
+  }
+
+  &__error {
+    text-align: center;
+    color: $error;
+    padding: 20px;
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+
+    .ui.pagination.menu .active.item {
+      background-color: $mar;
+      color: $background-primary;
+    }
+  }
+}
+
+.sin-todo {
+  color: $grey-clear;
+  font-size: 15px;
+}
+
+

@@ -1,0 +1,40 @@
+@use "../../scss/colors.scss" as *;
+
+.todo-is-completed {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+
+  > button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 28px;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    gap: 15px;
+    align-items: baseline;
+
+    > a {
+      color: $background-primary;
+      font-size: 20px;
+    }
+  }
+
+  &__true {
+    color: $yellow;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__false {
+    color: $green;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}

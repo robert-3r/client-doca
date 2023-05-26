@@ -1,0 +1,26 @@
+@use "../../../scss/colors.scss" as *;
+
+.container-user {
+  text-align: center;
+
+  h3 {
+    color: $mar;
+
+    > span{
+        color: $color-tertiary;
+    }
+  }
+
+  &__form {
+    &-avatar {
+      padding: 20px;
+      margin: 20px;
+      cursor: pointer;
+      .ui.small.image {
+        border: 3px dashed $pink;
+        width: 150px !important;
+        height: 150px !important;
+      }
+    }
+  }
+}

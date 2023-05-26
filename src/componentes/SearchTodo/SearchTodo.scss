@@ -1,0 +1,34 @@
+@use "../../scss/colors.scss" as *;
+
+.search-todo {
+  display: flex;
+  width: 90%;
+  gap: 10px;
+  align-items: center;
+  border: 1px solid $color-secondary;
+  border-bottom: 1.8px solid $color-tertiary;
+  padding: 0 10px;
+  box-sizing: content-box;
+  border-radius: 10px;
+
+  &:focus-within {
+    border-bottom: 4px solid $color-tertiary;
+  }
+
+  > input {
+    flex: 1;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color:$green ;
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: $pink;
+  }
+}

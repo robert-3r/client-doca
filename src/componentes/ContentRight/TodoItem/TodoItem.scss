@@ -1,0 +1,130 @@
+@use "../../../scss/colors.scss" as *;
+
+.todo-item {
+  margin: 25px;
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background-color: $color-to-do;
+  position: relative;
+
+  .ties {
+    width: 15px;
+    background-color: $color-text;
+    height: 6px;
+    border-radius: 2px;
+    position: absolute;
+    left: -17px;
+    bottom: 50%;
+
+    @media (max-width: 850px) {
+      left: -17px;
+    }
+  }
+
+  &__info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+
+    @media (max-width: 50rem) {
+      align-items: start;
+    }
+
+    &-text {
+      display: flex;
+      align-items: start;
+      gap: 20px;
+
+      > button {
+        border: none;
+        background-color: transparent;
+        font-size: 25px;
+        cursor: pointer;
+        color: $color-text;
+      }
+
+      > h2 {
+        white-space: wap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-weight: 300;
+        padding: 0 10px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* Número máximo de líneas a mostrar */
+        -webkit-box-orient: vertical;
+      }
+    }
+  }
+}
+
+// modo dark
+
+.dark {
+  margin: 25px;
+  border-radius: 10px;
+  background-color: $color-tertiary;
+  position: relative;
+
+  .ties {
+    width: 15px;
+    background-color: $background-primary;
+    height: 6px;
+    border-radius: 2px;
+    position: absolute;
+    left: -17px;
+    bottom: 50%;
+
+    @media (max-width: 850px) {
+      left: -17px;
+    }
+  }
+}
+
+.dark::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: -18px;
+  width: 5px;
+  height: 100%;
+  background-color: $background-primary;
+  border-radius: 10px;
+}
+.dark::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -18px;
+  top: 40px;
+  width: 5px;
+  border-radius: 10px;
+  height: 100%;
+  background-color: $background-primary; /* Puedes ajustar la opacidad y el color aquí */
+}
+
+// modo light
+
+.todo-item::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: -18px;
+  width: 5px;
+  height: 100%;
+  background-color: $color-text;
+  border-radius: 10px;
+}
+
+.todo-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -18px;
+  top: 40px;
+  width: 5px;
+  border-radius: 10px;
+  height: 100%;
+  background-color: $color-text; /* Puedes ajustar la opacidad y el color aquí */
+}

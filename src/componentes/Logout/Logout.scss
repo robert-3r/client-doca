@@ -1,0 +1,16 @@
+@use '../../scss/colors.scss' as *;
+
+.btn-logout{
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+    gap: 10px;
+    color:$error;
+    font-size: 18px;
+    cursor: pointer;
+
+    &:hover{
+        opacity: .7;
+    }
+}

@@ -1,0 +1,152 @@
+@use "../../scss/colors.scss" as *;
+
+
+
+
+
+.container-todo {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  height: 100vh;
+  position: relative;
+ 
+  
+
+  @media (max-width: 50rem) {
+    grid-template-columns: 100%;
+    height: auto;
+  }
+
+  &__n-left {
+    text-align: center;
+    position: relative;
+
+    .logout {
+      position: absolute;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      bottom: 20px;
+
+      @media (max-width: 50rem) {
+        display: none;
+      }
+    }
+
+    @media (min-width: 50rem) {
+      position: sticky;
+    }
+
+    .container-left__media {
+      display: none;
+      @media (min-width: 50rem) {
+        display: flex;
+        position: relative;
+      }
+    }
+
+    > img {
+      height: 150px;
+    }
+
+    @media (max-width: 50rem) {
+      > img {
+        height: 150px;
+        padding-top: 10px;
+      }
+    }
+
+    @media (max-width: 50rem) {
+      padding: 20px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__n-right {
+    position: relative;
+
+    z-index: 5;
+
+    @media (min-width: 50rem) {
+      overflow-y: scroll;
+    }
+
+    .container-todo__menu {
+      &-logout {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &__left {
+    background-color: $grey;
+    color: $color-secondary;
+  }
+
+  &__right {
+    background-color: $background-primary;
+    color: $color-primary;
+  }
+
+  &__right-dark {
+    background-color: #070a12;
+    color: $background-primary;
+  }
+  &__left-dark {
+    background-color: #0d111d;
+    color: $background-primary;
+    border-right: 1px solid #ccc;
+  }
+
+  .back-ground {
+    position: absolute;
+    background-color: #17141496;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+
+    @media (min-width: 50rem) {
+      display: none;
+    }
+  }
+
+  &__hamburger {
+    display: none;
+    @media (max-width: 50rem) {
+      display: block;
+    }
+
+    &-open {
+      font-size: 30px;
+      cursor: pointer;
+      color: $background-primary;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    &-close {
+      font-size: 30px;
+      cursor: pointer;
+      color: $background-primary;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+.over-flow {
+  overflow: hidden;
+}

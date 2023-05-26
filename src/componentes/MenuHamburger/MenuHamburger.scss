@@ -1,0 +1,19 @@
+@use "../../scss/colors.scss" as *;
+
+.menu-hamburger {
+  background-color: $color-primary;
+  color: $background-primary;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 93vh;
+  bottom: 0;
+
+  @media (max-width: 50rem) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 10px;
+  }
+}

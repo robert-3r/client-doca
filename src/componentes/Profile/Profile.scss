@@ -1,0 +1,27 @@
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__user {
+    display: flex;
+    gap: 15px;
+    cursor: pointer;
+
+    > img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+
+      h2 {
+        margin: 0;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
