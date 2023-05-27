@@ -77,6 +77,11 @@
     .container-todo__menu {
       &-logout {
         margin: 0 auto;
+        
+        @media (max-height:790px){
+          display: none;
+        }
+
       }
     }
   }

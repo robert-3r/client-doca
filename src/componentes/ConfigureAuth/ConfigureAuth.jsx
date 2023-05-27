@@ -1,5 +1,6 @@
 import "./ConfigureAuth.scss";
 import { useTheme } from "../../hooks";
+import { Logout } from "../Logout";
 
 export const ConfigureAuth = ({ onOpenConfigureModal }) => {
   const { theme, toggleTheme } = useTheme();
@@ -17,6 +18,9 @@ export const ConfigureAuth = ({ onOpenConfigureModal }) => {
           <option value="light">Claro</option>
           <option value="dark">Oscuro</option>
         </select>
+      </div>
+      <div className="configure-auth__logout">
+        <Logout />
       </div>
     </div>
   );

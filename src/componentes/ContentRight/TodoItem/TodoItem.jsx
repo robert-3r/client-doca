@@ -101,7 +101,7 @@ export const TodoItem = ({ todo, handleReload, setMessage }) => {
             </button>
             {isEdit ? (
               <Form onSubmit={formik.handleSubmit}>
-                <Form.Input
+                <Form.TextArea
                   name="name"
                   placeholder="Nombre de tu tarea"
                   value={formik.values.name}
