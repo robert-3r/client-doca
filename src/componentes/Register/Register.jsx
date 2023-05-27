@@ -5,8 +5,8 @@ import { image } from "../../assets";
 export const Register = () => {
   return (
     <>
-      <div className="container-login">
-        <div className="container-login__form">
+      <div className="container-register">
+        <div className="container-register__form">
           <img src={image.logoApp} alt="logo app" />
           <div>
             <FormRegister />

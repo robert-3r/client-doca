@@ -71,7 +71,7 @@ export class Todo {
       const request = await fetch(url, params);
       const response = await request.json();
 
-      console.log(response);
+    
       if (request.status !== 200) throw response;
 
       return response;

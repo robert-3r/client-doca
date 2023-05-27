@@ -58,8 +58,6 @@ export const TodoItem = ({ todo, handleReload, setMessage }) => {
         setMessage("!Tarea actualizada correctamente!");
         handleReload();
         setIsEdit(false);
-
-        console.log(formValue);
       } catch (error) {
         console.log(error);
       } finally {
@@ -90,9 +88,7 @@ export const TodoItem = ({ todo, handleReload, setMessage }) => {
   return (
     <>
       <div className={theme === "light" ? "todo-item" : "dark"}>
-       <div className="ties">
-         
-       </div>
+        <div className="ties"></div>
 
         <div className="todo-item__info">
           <div className="todo-item__info-text">

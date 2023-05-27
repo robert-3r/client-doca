@@ -7,7 +7,7 @@ import { useAuth } from "../../hooks";
 import { Dropdown, Icon, Loader } from "semantic-ui-react";
 import { BasicModal, FormUser } from "../Shared";
 import { size } from "lodash";
-import {ConfigureAuth} from '../ConfigureAuth'
+import { ConfigureAuth } from "../ConfigureAuth";
 const userController = new User();
 
 export const Profile = () => {
@@ -37,7 +37,6 @@ export const Profile = () => {
 
   if (size(userMe) === 0) return <Loader active inline="centered" />;
 
-  console.log(userMe._id)
   return (
     <>
       <div className="profile">
